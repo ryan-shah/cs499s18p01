@@ -3,16 +3,35 @@
 	<title>Project Requirements</title>
 </head>
 <body>
-	Technical Requirements (in order of priortiy)
+	<h1>2.1</h1>
+	<h2>Technical Requirements (in order of priortiy)</h2>
 	<ol>
-		<li>PHP 7.0 Webpage and MYSQL Database of programs</li>
-		<li>Run shell-executable scripts in parallel on a Linux server</li>
-		<li>Identify dependencies of executing programs and ensure they are run first</li>
+		<li>PHP 7.0 Webpage to manage which programs are executed and how often</li>
+		<li>MYSQL Database of programs that Spydr can control</li>
+		<li>Run shell-executable programs in parallel on a Linux server</li>
+		<li>Identify dependencies of programs and ensure they are run first</li>
 		<li>Ability to schedule how frequently this series of programs are run</li>
 		<li>Process statistics and tracking during execution</li>
 		<li>Dynamic load distribution of programs over server resources based on user defined specifications</li>
 		<li>Add/Edit list of known programs</li>
 	</ol>
+
+	<h1>2.2</h1>
+	<h2>Effort and size estimation</h2>
+	<p>The effort required to make a website which has all of the basic functionality which our customer wants (i.e. something that can edit a database, able to call an external runner program) is not going to be very high after we learn more about the Laravel framework. All of us have some experience in web development, so we won't have to take any time to get acquainted with the foundations of web programming. If we had to estimate, the basic functionality will take no more than two to three person weeks to implement. <br> Another component to this program is the runner. We plan on writing this in C/C++, as it has to be high-performance for running memory and CPU intensive programs with the least overhead possible. We are still not entirely sure how we will go about doing this. This program will likely not be very long, but integrating it with the website and all of the programs that our customer is already running might. We still don't have access to everything we need to get a good estimation on the complexity required on this part. <br> Another crucial component is the database. Before we create anything, we will have to consider design choices which minimize memory usage and redundancy. Again, all of us have experience designing and creating databases, so most of the time spent here will be on coming up with good design choices. <br> There are several goals that we could continue to pour time into and continually refine. Storing performance metrics will not be difficult to do initially; there are a few terminal commands that will give this information to us at any time. However, creating an algorithm to optimize the future nightly runs will not be trivial. The frontend of the website could also always be  refined, giving consideration to design choices that are less resource-intensive while producing the same output. </p>
+	
+	<h1>2.3</h1>
+	<h2>Schedule and milestones</h2>
+	<iframe src="https://calendar.google.com/calendar/b/1/embed?title=CS%20499&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=g.uky.edu_62lbjj7ehgl4b0nj7h9ip394p0%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+	<h1>2.4</h1>
+	<h2>Platforms, tools, languages</h2>
+	<ul>
+		<li>Linux Debian 3.16.43-2 x86_64, customer mandated</li>
+		<li>PHP-7.1.3 based website, customer mandated</li>
+		<li>Larvel 5.6 web-framework, most common PHP web-framework</li>
+		<li>C/C++-11 executable, language we are most comfortable with low level processing</li>
+	</ul>
 </body>
 
 </html>
