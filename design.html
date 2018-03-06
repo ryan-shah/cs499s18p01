@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<title>Design</title>
+	</head>
+
+	<body>
+		<h3>3.1 Overview</h3>
+		<p>There are many parts to this project. Here are the technical details from the requirements page:</p>
+		<dl>
+			<dt>PHP 7</dt>
+			<dd>PHP is the heavy lifter of the project. We have decided to use Laravel to create our website, which allows us to streamline both the frontend development process with the built-in Blade templating engine, as well as the backend development with object-relational mapping to handle database connections and also interacting with the C++ runner program.</dd>
+			<dt>MySQL</dt>
+			<dd>The type of database we settled on using. Our customer uses MySQL for his information gathering programs, so sticking with it for our project will make configuration on his end easier.</dd>
+			<dt>C++</dt>
+			<dd>This is the lowest-level and highest performance part of the project. C++ is used to create multithreaded instances of the processes that our customer needs to run each night. C++11 has a built-in thrading library (not pthreads!), as well as the ability to call arbitrary Linux commands, which allows us to gather runtime data (CPU time, memory usage, etc.) and pass it back to the website.</dd>
+		</dl>
+
+		<br>
+
+		<h3> 3.2 Environment </h3>
+		<ul>
+			<li> Server: Debian 3.16.43 </li>
+			<li> User Environments: Windows 10, Ubuntu 16.04, MacOS 10.12.4 </li>
+			<li> Database: mysql 5.0.12 </li>
+		</ul>
+
+		<br>
+		
+		<h3> 3.3 Data Flow</h3>
+		<img src="Design.png">
+	</body>
+
+</html>
