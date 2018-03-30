@@ -6,19 +6,27 @@
 	<h1>2.1</h1>
 	<h2>Technical Requirements (in order of priortiy)</h2>
 	<ol>
-		<li>PHP 7.0 Webpage to manage which programs are executed and how often</li>
-		<li>MYSQL Database of programs that Spydr can control</li>
-		<li>Run shell-executable programs in parallel on a Linux server</li>
-		<li>Identify dependencies of programs and ensure they are run first</li>
-		<li>Ability to schedule how frequently this series of programs are run</li>
-		<li>Process statistics and tracking during execution</li>
-		<li>Dynamic load distribution of programs over server resources based on user defined specifications</li>
-		<li>Add/Edit list of known programs</li>
+		<li>PHP 7.0 Webpage to manage which scripts are executed and what time they are executed</li>
+		<li>MYSQL Database of scripts, dependencies, and schedules for Spydr to keep track of</li>
+		<li>Run shell-executable scripts in parallel on a Linux server</li>
+		<li>Identify dependencies of scripts and ensure they are run first</li>
+		<li>Ability to schedule how frequently this series of scripts is run</li>
+		<li>Script memory and runtime statistics and tracking during execution</li>
+		<li>Dynamic load distribution of scripts over server resources based on user defined specifications</li>
+		<li>Add/Edit list of known scripts</li>
 	</ol>
 
 	<h1>2.2</h1>
 	<h2>Effort and size estimation</h2>
-	<p>The effort required to make a website which has all of the basic functionality which our customer wants (i.e. something that can edit a database, able to call an external runner program) is not going to be very high after we learn more about the Laravel framework. All of us have some experience in web development, so we won't have to take any time to get acquainted with the foundations of web programming. If we had to estimate, the basic functionality will take no more than two to three person weeks to implement. <br> Another component to this program is the runner. We plan on writing this in C/C++, as it has to be high-performance for running memory and CPU intensive programs with the least overhead possible. We are still not entirely sure how we will go about doing this. This program will likely not be very long, but integrating it with the website and all of the programs that our customer is already running might. We still don't have access to everything we need to get a good estimation on the complexity required on this part. <br> Another crucial component is the database. Before we create anything, we will have to consider design choices which minimize memory usage and redundancy. Again, all of us have experience designing and creating databases, so most of the time spent here will be on coming up with good design choices. <br> There are several goals that we could continue to pour time into and continually refine. Storing performance metrics will not be difficult to do initially; there are a few terminal commands that will give this information to us at any time. However, creating an algorithm to optimize the future nightly runs will not be trivial. The frontend of the website could also always be  refined, giving consideration to design choices that are less resource-intensive while producing the same output. </p>
+	<p>
+	The effort required to make a website which has all of the functionality which our customer wants (i.e. something that can edit a database, able to call an external program) is not going to be very high after we learn more about the Laravel framework. However, there will be a learning curve to understand the intricacies of Laravel and to make the layout look respectable. All of us have some experience in web development, so we won't have to take any time to get acquainted with the foundations of web programming (such as HTML and PHP). If we had to estimate, the basic functionality will take no more than two to three person weeks to implement. 
+	<br>
+	Another component to this project is the server-side program that executes the scripts. We plan on writing this in C/C++, as it has to be high-performance for running memory and CPU intensive programs with minimal overhead. This program will be a tad complex to keep track of all of the dependencies and tracking the memory usage of the scripts it executes. Additionally, integrating it with the website and all of the programs that our customer will have additional complexity. Once we have access to the customer's server infrastructure, this should take two to three person weeks to implement as well.
+	<br> 
+	Another crucial component is the database. Before we create anything, we will have to consider design choices which minimize memory usage and redundancy. Again, all of us have experience designing and creating databases, so most of the time spent here will be on coming up with good design choices. We should have to implement around three tables to include scripts, schedules, and dependencies. This should take no more than one person week.
+	<br> 
+	There are several goals that we could continue to pour time into and continually refine. Storing performance metrics will not be difficult to do initially; there are a few terminal commands that will give this information to us at any time, but getting information from them without system calls may present an issue. Additionally, creating an algorithm to optimize the future nightly runs will not be trivial. The frontend of the website could also always be refined, giving consideration to design choices that are less resource-intensive while producing the same output. 
+	</p>
 	
 	<h1>2.3</h1>
 	<h2>Schedule and milestones</h2>
