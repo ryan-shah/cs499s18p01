@@ -5,10 +5,10 @@
 <body>
 <h1>Introduction</h1>
 <p>
-Spydr's Threads (Spydr) is a web based tool that we will be developing that schedules a sequence of week-nightly recurring scripts. These scripts perform variety of functions including both database and website management. Spydr should be aware of dependent processes that need to be run before certain scripts and ensure that these are executed first. 
+Fishback Management and Research Inc. (sometimes refered to as ODDS), a stock trading company, has many different PHP and Bash scripts that they run in sequence every night to keep their databases and customer facing products up to date and working properly, in addition to related maintenance tasks. They are having issues with the length of time this process takes as each script is executed one at a time, right after each other. As a result, this means the total run time is several hours. Our job is to find a solution to this problem, in additon to creating a web based portal to manage these scripts and which ones are run each night.
 </p>
 <p>
-Spydr will be accessed by ODDS server administrators who should be able to specify what percentage of the server's resources Spydr can utilize to ensure the number of threaded processes does not prevent the system from serving other users. In the same vein of thought, Spydr should dynamically load these processes so that no process is started when there are not enough resources to handle it. Finally, users should be able to add a new processes or script to Spydr in addition to editing the dependencies and order of existing ones.
+Our solution is Spydr's Threads (Spydr). This will solve the time issue by intelligently running groups of scripts in parallel threads, while also enuring dependencies are satisified and nothing is run out of order. This utility will be accessed by ODDS server administrators via a web portal that allows them to create/edit/remove scripts in addition to being able to add/remove them from the schedule of scripts to run each night. They will also be able to create multiple schedules to run at different times and/or days.
 </p>
 </body>
 </html>
