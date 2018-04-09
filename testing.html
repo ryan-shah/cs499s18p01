@@ -11,8 +11,6 @@
 	<ul>
 		<h3><li>Website</li></h3>
 		<ol>
-			<li>Fetches Data from Database</li>
-			<li>Updates Data in Database when form is submitted (add/edit/remove scripts/schedules)</li>
 			<li>Displays forms properly</li>
 			<li>Writes Schedule to config file when form is submitted</li>
 			<li>Reads updated values from log file when schedule is run</li>
@@ -31,6 +29,8 @@
 	<h2><li>Integration Tests</li></h2>
 	These tests how our modules interact with each other so the following tests will check to make sure our connections in the process are working as intended.
 	<ol>
+		<li>Fetches Data from Database</li>
+		<li>Updates Data in Database when form is submitted (add/edit/remove scripts/schedules)</li>
 		<li>Add/remove script/schedule to database and ensure it appears on website</li>
 		<li>Add/remove script/schedule to website and ensure it appears in database</li>
 		<li>Change runtime of schedule in database and ensure it appears on website</li>
