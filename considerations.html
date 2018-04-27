@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>Design Considerations</title>
+</head>
+
+<body>
+	<h1>Design Considerations</h1>
+	<p> There were a few problems that we ran into during implementation. Many of these were solved after more research but some required that we create a work around.</p>
+	<p> For the C++ program, this was how php scripts showed up in the /proc/PID/stat file. Since the script name was listed as php instead of “scriptname.php” we had to perform a workaround by finding the program name in the /proc/PID/cmdline file and only using /proc/PID/stat for runtime information. Additionally, we realized a couple of weeks in that in order to run some programs we need to know a lot of different information about the scripts such as command line arguments and sudo instructions. To get this information, we added a Command Line column to our database so the user could input the exact command they want to run.</p>
+	<p> For the website, we weren’t sure how we could have the C++ component communicate with the website component so that runtime statistics could be placed onto both the database and spydr.json.  The workaround was creating a route in Laravel that calls ‘updateDatabase()’ when triggered.  On the C++ side, a script was implemented that calls the website through a wget.  Since calling wget creates an output file even if nothing is downloaded, the script also takes the output file and sends it to ‘/dev/null’, which effectively deletes the file.</p>
+	
+</body>
+</html>
