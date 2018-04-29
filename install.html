@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Installation</tile>
+</head>
+
+<body>
+
+<h1>Installation</h1>
+<table border=2>
+<thead><tr class="tableizer-firstrow"><th>Requirments</th></tr></thead><tbody>
+ <tr><td>php 7.1</td></tr>
+ <tr><td>php7.1-mysql</td></tr>
+ <tr><td>php7.1-mcrypt</td></tr>
+ <tr><td>php7.1-gd</td></tr>
+ <tr><td>php7.1-mbstring</td></tr>
+ <tr><td>php7.1-xml</td></tr>
+ <tr><td>mysql-server</td></tr>
+ <tr><td>libapache2-mod-php7.1</td></tr>
+ <tr><td>apache2</td></tr>
+</tbody></table>
+
+<p>To install some of these, you may need add the following to /etc/apt/sources.list</p>
+<p>"deb http://mirrordirector.raspbian.org/raspbian/ buster main contrib non-free rpi"</p>
+
+<h2>Steps</h2>
+
+<ol>
+<li>Clone repository (https://github.com/ryan-shah/CS499.git) to /var/www/html</li>
+	<li>Change the ownership of the CS499 directory to "www-data" (or whatever the 'user' is that owns the /var/www directory is)</li>
+	<li>Change directory to CS499/spydr</li>
+	<li>run "sudo composer install"</li>
+	<li>Under /etc/apache2/sites-enabled/000-default.conf, add this:</li>
+	<pre>
+		&lt;Directory /&gt; 
+			Options FollowSymLinks
+			AllowOverride None 
+		&lt;/Directory&gt; &lt;Directory /var/www/CS499/spydr/public/&gt;
+			AllowOverride All 
+		&lt;/Directory&gt;
+	</pre>
+	<li>In the spydr/.env, change the "DB_*" lines to match your database configuration</li>
+	<li>Run "php artisan migrate" to create the necessary database tables</li>
+	<li>Done. The website can now be accessed at www.<root-domain>.com/CS499/spydr/public</li>
+	<ol>
+		<li>The public/.htaccess file should already be configured.</li>
+		<li>The C++ program will also get pulled from github. In order to run it, you must first change the config.h file’s WEBSITE_READ_OUTPUT variable to match the domain and port of the website (with the “/output” still on the end). Type “make” into the terminal to compile it, then it can be run immediately (typically just “./spydr”; may require su access if located in the /var/ directory); any changes made by the website will be detected by the spydr program.</li>
+	</ol>
+</ol>
+
+</body>
+</html>
