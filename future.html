@@ -4,7 +4,7 @@
 </head>
 
 <body>
-	<h1>Design Considerations</h1>
+	<h1>Future Enhancements</h1>
 	<p>There are a number of features and improvements that we have not been able to implement over the course of the semester.  None of them are so important as to render the software unusable for the customers, but they should be noted nonetheless.  Included for each are considerations that a future developer or group of developers should take into account if they decide to act on what possible future enhancements we have below.</p>
 	<p>To begin, the software does not have the ability to run and monitor clusters.  These are programs that call other programs related to each other.  While it is not implemented, the process of adding the implementation has been made relatively simple.  There is an empty function called ‘track_cluster()’ where such an implementation can be imported.  Other things will need to be added as well, including adding a column to the programs table of the database that contains a boolean that will determine whether or not the program in question is a cluster and adding a checkbox to ‘addProgramModal’ for the user to notify the website whether or not the program in question is a cluster.</p>
 	<p>Another helpful inclusion that was not implemented is a real-time search on the website for both scripts and schedules.  This was not a problem experienced during development, but as more schedules and scripts are added, it will become cumbersome for a user to have to scroll a great deal to find what they want.  In terms of implementing this, the only sources we found read through tables, so the names of the scripts and the names of the schedules will need to be placed into two tables so that they could be searched in real-time.</p>
